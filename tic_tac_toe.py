@@ -153,7 +153,7 @@ class TicTacToe:
         pygame.display.update()
 
 
-    def swap_turn(self, x, y):
+    def swap_turn(self):
         if self.turn=='x':
             self.turn = 'o'
         else:
@@ -181,7 +181,7 @@ class TicTacToe:
                         self.board[y][x]=self.turn
                         self.drawXO(x, y)
                         if not self.game_ended(): 
-                            self.swap_turn(x,y)     
+                            self.swap_turn()     
                         else:
                             self.start_new_game()
 
